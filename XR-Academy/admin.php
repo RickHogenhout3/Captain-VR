@@ -13,6 +13,12 @@
     />
   </head>
   <body>
+  <?php include_once "config.php"; 
+if ($_SESSION["coach_id"] == null) {
+        header("location:user.html");
+}
+$query = $connect->query("SELECT * FROM coaches")
+?>
     <nav
       class="navbar navbar-expand-xl navbar-light bg-light sticky-top navbar-bg-white py-0"
     >

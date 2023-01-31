@@ -13,6 +13,12 @@
     />
   </head>
   <body>
+  <?php include_once "config.php"; 
+if ($_SESSION["username"] == null) {
+        header("location:inlog.html");
+}
+$query = $connect->query("SELECT * FROM users")
+?>
     <nav
       class="navbar navbar-expand-xl navbar-light bg-light sticky-top navbar-bg-white py-0"
     >
@@ -58,7 +64,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact </a>
+              <a class="nav-link" href="readfile.php">Contact </a>
             </li>
           </ul>
         </div>

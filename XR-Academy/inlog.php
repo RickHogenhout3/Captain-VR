@@ -23,7 +23,7 @@
         $count = $statement->rowCount();
         if($count > 0){
             $_SESSION['username'] = $username;
-            header("location: user.html");
+            header("location: admin.php");
         }else{
             echo "username or password is incorrect";
         }
