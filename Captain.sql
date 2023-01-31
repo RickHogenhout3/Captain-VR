@@ -17,9 +17,8 @@ CREATE TABLE coaches (
 );
 CREATE TABLE videos (
    id INT AUTO_INCREMENT PRIMARY KEY,
-   video_name VARCHAR(255) NOT NULL,
-   video_path VARCHAR(255) NOT NULL,
-   uploaded_at DATETIME DEFAULT CURRENT_TIMESTAMP
+   name VARCHAR(255) NOT NULL,
+   location VARCHAR(255) NOT NULL
 );
 INSERT INTO `coaches` (`coach_id`, `username`, `email`, `password`) VALUES ('1', 'admin', 'admin@gmail.com', 'admin123');
 INSERT INTO `users` (`id`, `username`, `password`) VALUES ('1', 'user', 'wordpass12');
