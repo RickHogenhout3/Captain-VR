@@ -15,5 +15,10 @@ CREATE TABLE coaches (
     email VARCHAR(1050) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
-INSERT INTO `admin` (`admin-id`, `username`, `email`, `password`) VALUES ('1', 'admin', 'admin@gmail.com', 'admin123');
+CREATE TABLE videos (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(255) NOT NULL,
+   location VARCHAR(255) NOT NULL
+);
+INSERT INTO `coach0` (`coach_id`, `username`, `email`, `password`) VALUES ('1', 'admin', 'admin@gmail.com', 'admin123');
 INSERT INTO `users` (`id`, `username`, `password`) VALUES ('1', 'user', 'wordpass12');
