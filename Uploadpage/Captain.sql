@@ -22,5 +22,5 @@ CREATE TABLE videos (
    name VARCHAR(255) NOT NULL,
    location VARCHAR(255) NOT NULL
 );
-INSERT INTO `coaches` (`coach_id`, `firstname`, `lastname`, `email`, `password`) VALUES ('1', 'admin', 'admin@gmail.com', 'admin123');
-INSERT INTO `users` (`id`, `firstname`,`lastname`, `password`) VALUES ('1', 'user', 'wordpass12');
+INSERT INTO `coaches` (`coach_id`, `firstname`, `lastname`, `email`, `password`) VALUES ('1', 'admin', 'admin', 'admin@gmail.com', 'admin123');
+INSERT INTO `users` (`id`, `firstname`,`lastname`, `password`) VALUES ('1', 'user', 'name', 'wordpass12');
