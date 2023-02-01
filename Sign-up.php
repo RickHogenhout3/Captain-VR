@@ -93,7 +93,7 @@ if(empty($firstname));
                 Along</a>
             </li>
             <li class="nav-id-2338 nav-item">
-              <a href="/contact/" class="nav-link  text-success  fw-bold">Contact</a>
+              <a href="/contact/" class="nav-link  text-success  fw-semibold" style="color: #007277">Contact</a>
             </li>
           </ul>
         </div>
