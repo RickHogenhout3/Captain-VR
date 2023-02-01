@@ -7,8 +7,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>Captain VR | Sign up</title>
+  <title>Captain VR</title>
 </head>
+<?php
+ session_start();  
+ $servername = "localhost";
+ $username = "bit_academy";
+ $password = "bit_academy";
+ $dbname = "captain_vr";
+ $charset = "utf8mb4";
+try {  
+      $connect = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);  
+      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);}
+      catch (PDOException $error) {  
+        $message = $error->getMessage();  
+    }
+
+$addME = "Sign-up";
+if (!isset($_GET['firstname'])) {
+
+} else {
+    $firstname = $_GET['firstname'];
+}
+if (!isset($_GET['lastname'])) {
+
+} else {
+    $lastname = $_GET['lastname'];
+}
+if (!isset($_GET['email'])) {
+
+} else {
+    $email = $_GET['email'];
+}
+if (!isset($_GET['password'])) {
+    $password = null;
+} else {
+    $password = $_GET['password'];
+}
+
+if ($email == null) {
+  $sql = "INSERT INTO users VALUES ('value','$firstname', '$lastname', '$password')";
+  if (isset($_GET['UserAdd']) == true && $_GET['UserAdd'] == $addME) {
+    $movies = $connect->query($sql)
+    ->fetchAll();
+}
+if(empty($firstname));
+} else {
+  $sql = "INSERT INTO coaches VALUES ('value','$firstname', '$lastname', '$email', '$password')";
+  if (isset($_GET['UserAdd']) == true && $_GET['UserAdd'] == $addME) {
+    $movies = $connect->query($sql)
+    ->fetchAll();
+  }
+if(empty($firstname));
+}
+?>
 
 <body class="doc-trainingtypes page">
   <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top navbar-bg-white py-0">
@@ -70,20 +122,7 @@
                       <div id="umbraco_form_e02c555b3676448bb962ba559c38112f"
                         class="umbraco-forms-form contact umbraco-forms-bootstrap5">
 
-                        <form action="/sail-along/" enctype="multipart/form-data" method="post"><input
-                            name="__RequestVerificationToken" type="hidden"
-                            value="kRbG4wEWe9S9KpqTXGIie6at7kZZruEPub3YYUT9ywFPyiq49cfNI2zCGDn6AnHTAu_Rbl___ZZie0YycKzmdhnMeHkTFIs-PxbaiQHCric1"><input
-                            data-val="true" data-val-required="The FormId field is required." name="FormId"
-                            type="hidden" value="e02c555b-3676-448b-b962-ba559c38112f"><input name="FormName"
-                            type="hidden" value="Contact"><input data-val="true"
-                            data-val-required="The RecordId field is required." name="RecordId" type="hidden"
-                            value="00000000-0000-0000-0000-000000000000"><input name="PreviousClicked" type="hidden"
-                            value=""><input name="Theme" type="hidden" value="bootstrap5"> <input type="hidden"
-                            name="FormStep" value="0">
-                          <input type="hidden" name="RecordState"
-                            value="NkVFN0IxMUYyM0NGRjRDNUMzOTBCQkNFOTQ5QzAxMkVGQTk4NjMwNEJBRTY5Q0U2REY0OEUxNzJFQTVERkJCOUY4MjkwMjQzQzdDM0NDMjNBNEUzMDYwQjlBOThDMzU0QTg5MDFDMEY0NTgyNDNCMDYwQzg2OEREMjhCNkNCNkY4MzdCMkMzODMyRDIxNjNEMTQ1REIxOUVBN0FERjY4QjFDQTQ1MjNFMjQ4QTIxRjZBMTRBRDBEMTc2NzkyNDIzMkQyMEVCQ0VDRjNCNUZBNjYyMTBEMzczMjJGRUQ2ODI5MERERTI3MEI0Qjg4Q0M3NEEyRjJEQ0E3RDAxQjk1REE4QzkxQ0E4Rjc5OENFOUMwMDhEM0Q4OEEyRkI0NTNGOUJFNzdBMjQ1NzI0RjZFMTY3RTM2QTE4OTZCOEQ5NTRDQTM2QjI5MkRDRjEzMzY0NTg2NDU5NzY5RjMxMEYzMDQwNUM4QUJFMjFCMUY4OEY3NjkzQTBCMDczRUIxREE4Q0JDNkZCMDQ3MjdDMTRCMkZERURDQTM0MzRGRDM4OTcwNjAxN0MzMTM5RDFERkQwMTg4OTI3MzEwRTk1MDEyMDU5MTU2OTRGMzc5QUE0ODI5RDI2RTMxODI2RTM3OUYzNTAwMDVDM0UwRTk3OEY1QjZBMzRCNTQxRDJGMUFCNkNEQ0Q1N0U3ODU2RUREN0U3MDBEMUVDRTQ0QzhBNjk0MTY1RDY1RUNFMzM1NUM1RkM2NDk5ODBCNkZDNDhCOTJGMjFENUZGNjA4RDU5ODEzOEMyQzBCQUI2QURENDE4RUEzQzlBNkJFMTM0QTgyN0NDNEU4RkNFRTc5NUFGMkMzMUY2NDlCQjUwMEE5OUMwMUU0QUMzNTJDNDZBNDY3NTY1Njk4MUExM0VEMENENjVCMkMwRUU5QUQwNDc4RkQ0RUE3NzhGQjc0Q0I4QTQyNjM3MTYyM0EzNDFCRkVFMzAwNUIzQTg4NDlCMzhEMEEzQzE0MzBFQzU5MTdEODIyQzI0MDU4NkI1RUVBNzI3NTM3NEJDQ0RBNDc3QzFDOTM2RkQzOTY2Q0U2NzMyRDU2ODg0QTg0NzNENjUyQTU5NkFFODBCODcxNTUyMEIxMkNBNzAxMUIzRkNGMEEzQTk2RTQ1NzZFQUExQjhCMjE2OUY5RDc3Njk0OTgxNjY5NDEyQUJEOTEzN0Y5MUIzQTg5MjJDMUQyMDEzRUQ0QzAxQzAyMUEzRUMxNzlBMTY5OUVCRTFDMzkzNTc5NUNBNDg2RTNEREVGOTdEQ0Y3M0ExMDMxRDI0QkQ1OEYxMjRFRDUyQ0RBNjZGOUI3RDE1MTBGMzA4MkJFQUFCNjhENzkwNjEwQTI1MzQ3REYyQjU1MzI5QzVDMjUxNjQ4NThGMTg4OUNERDdDNDUxNzlBMDM0NzQzMUFCRjM0RTFBRTg3MTc1OUFEMzA3MkU3MkZGM0M5NUU1RUJGRThGMzg3RUIyMkZERDQ2MUY3ODJCNjUwNkU5OTk1NkVBRTVCNkZBMkIwMURDOTkyNkJGOTU3MEE5NDUzQTU2NDJCMDk4MkY4ODJDODY=">
-
-
+                        <form action='sign-up.php' method="GET">
 
 
 
@@ -104,24 +143,23 @@
 
                                   <div class=" umbraco-forms-field name shortanswer mandatory mb-2">
 
-                                    <label for="d17bd2f3-814a-4e07-9c97-954e02568465"
+                                    <label for="firstname"
                                       class="umbraco-forms-label form-label mb-0">
                                       Firstname
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">
 
-                                      <input type="text" name="d17bd2f3-814a-4e07-9c97-954e02568465"
-                                        id="d17bd2f3-814a-4e07-9c97-954e02568465" class="form-control form-control text"
-                                        value="" maxlength="500" data-val="true"
-                                        data-val-required="Please provide a value for Name">
+                                      <input type="text" name="firstname"
+                                        id="firstname" class="form-control form-control text"
+                                        value="" maxlength="500" required>
 
 
 
 
 
                                       <span class="field-validation-valid invalid-feedback"
-                                        data-valmsg-for="d17bd2f3-814a-4e07-9c97-954e02568465"
+                                        data-valmsg-for="firstname"
                                         data-valmsg-replace="true"></span>
                                     </div>
 
@@ -133,23 +171,23 @@
 
                                   <div class=" umbraco-forms-field company shortanswer alternating mb-2">
 
-                                    <label for="8b88ce7f-4b6f-44a7-d779-56b40cc4a78a"
+                                    <label for="lastname"
                                       class="umbraco-forms-label form-label mb-0">
                                       Lastname
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">
 
-                                      <input type="text" name="8b88ce7f-4b6f-44a7-d779-56b40cc4a78a"
-                                        id="8b88ce7f-4b6f-44a7-d779-56b40cc4a78a" class="form-control form-control text"
-                                        value="" maxlength="500">
+                                      <input type="text" name="lastname"
+                                        id="lastname" class="form-control form-control text"
+                                        value="" maxlength="500" required>
 
 
 
 
 
                                       <span class="field-validation-valid invalid-feedback"
-                                        data-valmsg-for="8b88ce7f-4b6f-44a7-d779-56b40cc4a78a"
+                                        data-valmsg-for="lastname"
                                         data-valmsg-replace="true"></span>
                                     </div>
 
@@ -163,38 +201,6 @@
                             <fieldset class="umbraco-forms-fieldset" id="f6b24ec7-99b0-4884-9f51-f15116452e83">
 
 
-                              <div class="row form-row">
-
-                                <div class="umbraco-forms-container col-md-12">
-
-                                  <div class=" umbraco-forms-field country shortanswer mb-2">
-
-                                    <label for="79f7c4da-c4b4-4763-9782-e763f2355c41"
-                                      class="umbraco-forms-label form-label mb-0">
-                                      Country
-                                    </label>
-
-                                    <div class="umbraco-forms-field-wrapper">
-
-                                      <input type="text" name="79f7c4da-c4b4-4763-9782-e763f2355c41"
-                                        id="79f7c4da-c4b4-4763-9782-e763f2355c41" class="form-control form-control text"
-                                        value="" maxlength="500">
-
-
-
-
-
-                                      <span class="field-validation-valid invalid-feedback"
-                                        data-valmsg-for="79f7c4da-c4b4-4763-9782-e763f2355c41"
-                                        data-valmsg-replace="true"></span>
-                                    </div>
-
-
-                                  </div>
-
-                                </div>
-                              </div>
-
                             </fieldset>
                             <fieldset class="umbraco-forms-fieldset" id="4121c92e-0c10-445c-9caf-54905f71e444">
 
@@ -205,15 +211,15 @@
 
                                   <div class=" umbraco-forms-field email shortanswer mandatory alternating mb-2">
 
-                                    <label for="ea52602b-4cac-46d3-f5a9-5bef8f291183"
+                                    <label for="email"
                                       class="umbraco-forms-label form-label mb-0">
                                       E-mail
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">
 
-                                      <input type="text" name="ea52602b-4cac-46d3-f5a9-5bef8f291183"
-                                        id="ea52602b-4cac-46d3-f5a9-5bef8f291183" class="form-control form-control text"
+                                      <input type="text" name="email"
+                                        id="email" class="form-control form-control text"
                                         value="" maxlength="500" data-val="true"
                                         data-val-required="Please provide a value for E-mail"
                                         data-val-regex="Please provide a valid value for E-mail"
@@ -224,7 +230,7 @@
 
 
                                       <span class="field-validation-valid invalid-feedback"
-                                        data-valmsg-for="ea52602b-4cac-46d3-f5a9-5bef8f291183"
+                                        data-valmsg-for="email"
                                         data-valmsg-replace="true"></span>
                                     </div>
 
@@ -234,26 +240,25 @@
                                 </div>
                                 <div class="umbraco-forms-container col-md-6">
 
-                                  <div class=" umbraco-forms-field phone shortanswer mandatory mb-2">
+                                  <div class=" umbraco-forms-field password shortanswer mandatory mb-2">
 
-                                    <label for="ac347129-c70c-4c80-80bf-16ebf7daa8cc"
+                                    <label for="password"
                                       class="umbraco-forms-label form-label mb-0">
                                       Password
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">
 
-                                      <input type="text" name="ac347129-c70c-4c80-80bf-16ebf7daa8cc"
-                                        id="ac347129-c70c-4c80-80bf-16ebf7daa8cc" class="form-control form-control text"
-                                        value="" maxlength="500" data-val="true"
-                                        data-val-required="Please provide a value for Phone">
+                                      <input type="password" name="password"
+                                        id="password" class="form-control form-control text"
+                                        value="" maxlength="500" required>
 
 
 
 
 
                                       <span class="field-validation-valid invalid-feedback"
-                                        data-valmsg-for="ac347129-c70c-4c80-80bf-16ebf7daa8cc"
+                                        data-valmsg-for="password"
                                         data-valmsg-replace="true"></span>
                                     </div>
 
@@ -264,15 +269,12 @@
                               </div>
 
                             </fieldset>
-                            <div style="display: none">
-                              <input type="text" name="e02c555b3676448bb962ba559c38112f">
-                            </div>
 
 
                             <div class="umbraco-forms-navigation row form-row">
 
                               <div class="col-sm-12 bg-warning rounded-pill">
-                                <input type="submit" class="btn btn-third btn-submit" value="Submit" name="submitbtn">
+                                <input type="submit" name="UserAdd" class="btn btn-third btn-submit" value="<?php echo $addME ?>">
                               </div>
 
 
