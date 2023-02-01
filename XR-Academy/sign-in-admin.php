@@ -28,7 +28,7 @@ include_once "config.php";
                     $_SESSION["firstname"] = $_POST["firstname"];  
                     header("location:admin.php");  
                 } else {  
-                $query = "SELECT * FROM users WHERE firstname = :firstname AND password = :password";;  
+                $message = '<label>Wrong Data</label>'; 
             }  
         } 
     }  
@@ -102,6 +102,11 @@ include_once "config.php";
 
                                                         <fieldset class="umbraco-forms-fieldset" id="5e84c306-3feb-476c-b7c1-e615860c5da2">
 
+                                                        <?php  
+                                                        if (isset($message)) {  
+                                                            echo '<label class="text-danger">' . $message . '</label>';  
+                                                        }  
+                                                        ?>
 
                                                             <div class="row form-row">
 
@@ -138,7 +143,7 @@ include_once "config.php";
 
                                                                         <div class="umbraco-forms-field-wrapper">
 
-                                                                            <input type="text" name="password" id="password" class="form-control form-control text" value="" maxlength="500">
+                                                                            <input type="password" name="password" id="password" class="form-control form-control text" value="" maxlength="500">
 
 
 
