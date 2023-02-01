@@ -14,8 +14,8 @@
   </head>
   <body>
   <?php include_once "config.php"; 
-if ($_SESSION["coach_id"] == null) {
-        header("location:user.html");
+if ($_SESSION["coach_id"] = 0) {
+        header("location:user.php");
 }
 $query = $connect->query("SELECT * FROM coaches")
 ?>

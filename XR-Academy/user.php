@@ -14,8 +14,8 @@
   </head>
   <body>
   <?php include_once "config.php"; 
-if ($_SESSION["username"] == null) {
-        header("location:inlog.html");
+if ($_SESSION["firstname"] == null) {
+        header("location:index.html");
 }
 $query = $connect->query("SELECT * FROM users")
 ?>
