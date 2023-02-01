@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>Captain VR</title>
+  <title>Captain VR | Sign up</title>
 </head>
 
 <body class="doc-trainingtypes page">
@@ -238,7 +238,7 @@
 
                                     <label for="ac347129-c70c-4c80-80bf-16ebf7daa8cc"
                                       class="umbraco-forms-label form-label mb-0">
-                                      Phone
+                                      Password
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">
