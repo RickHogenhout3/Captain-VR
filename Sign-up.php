@@ -63,7 +63,7 @@ if(empty($firstname));
 ?>
 
 <body class="doc-trainingtypes page">
-  <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top navbar-bg-white py-0">
+  <nav class="navbar navbar-expand-xl navbar-light bg-light sticky-top navbar-bg-white py-0" style="height: 60px;">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="https://thevrcoaches.com/assets/vrimg/logo.png" class="img-fluid" alt="Logo VR Coach" width="450"
@@ -77,19 +77,19 @@ if(empty($firstname));
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-id-1068 nav-item">
-              <a href="/vr-coaches/" class="nav-link text-success fw-bold">VR Coaches</a>
+              <a href="/vr-coaches/" class="nav-link fw-semibold" style="color: #007277">VR Coaches</a>
             </li>
             <li class="nav-id-2051 nav-item">
-              <a href="/metaverse-coaches/" class="nav-link text-success fw-bold">Metaverse Coaches</a>
+              <a href="/metaverse-coaches/" class="nav-link fw-semibold" style="color: #007277">Metaverse Coaches</a>
             </li>
             <li class="nav-id-2213 nav-item  current">
-              <a href="/xr-academy/" class="nav-link text-success fw-bold">XR Academy</a>
+              <a href="/xr-academy/" class="nav-link fw-semibold" style="color: #007277">XR Academy</a>
             </li>
             <li class="nav-id-2052 nav-item">
-              <a href="/xr-products/" class="nav-link text-success fw-bold">XR Products</a>
+              <a href="/xr-products/" class="nav-link fw-semibold" style="color: #007277">XR Products</a>
             </li>
             <li class="nav-id-2053 nav-item">
-              <a href="/sail-along/" class="btn btn-third mt-1 bg-warning rounded-pill text-success fw-bold">Sail
+              <a href="/sail-along/" class="btn btn-third mt-1 bg-warning rounded-pill fw-semibold" style="color: #007277">Sail
                 Along</a>
             </li>
             <li class="nav-id-2338 nav-item">
@@ -102,23 +102,21 @@ if(empty($firstname));
   </nav>
   <div class="pagecontainer text-light">
     <div class="header-container">
-      <div class="bg tobi">
-        <div class="container">
+      <div>
+      <img src="https://eventive.imgix.net/166292608349134d6798060cccc844cab.jpg" class="img-fluid" style="height: 1050px;">
+        <div class="container" style="position: absolute; top: 50px; margin-left: 110px;">
           <div class="row">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFZc0CLL0mDalezfHFMCU6Z6Wr6Drfxo-3pg&usqp=CAU"
-              class="img-fluid">
-            <div class="col-md-12 col-sm-12 text-center position-absolute start-0 mt-5">
-              <h1>Sail Along</h1>
-              <h3 class="fs-5">Are you a coach, trainer, therapist or consultant and do you want to be involved or join
+            <div class="col-md-12 col-sm-12 text-center mt-5">
+              <h1 class="fw-bold" style="color: #E0FCFF;">Sail Along</h1>
+              <h3 class="fs-5" style="color: #E0FCFF;">Are you a coach, trainer, therapist or consultant and do you want to be involved or join
                 forces?<br><br>Do you want to become future proof?<br>Do you want to Distinguish yourself?<br><br>Come
                 on board and sail along with us into the future.<br><br></h3>
-              <h3>The VR Coaches!<br><br><br><br></h3>
+              <p class="fs-4" style="color: #E0FCFF;">The VR Coaches!<br><br><br><br></p>
               <section class="section-tekst">
                 <div class="container">
                   <div class="row">
-                    <div class="offset-md-2 col-md-8">
-                      <h3 style="text-align: center;">Sign Up and Sail</h3>
+                    <div class="offset-md-2 col-md-8" style="background-color: rgba(29,155,165,.2); height: 310px">
+                      <h3 class="fw-bold" style="text-align: center;">Sign Up and Sail</h3>
                       <div id="umbraco_form_e02c555b3676448bb962ba559c38112f"
                         class="umbraco-forms-form contact umbraco-forms-bootstrap5">
 
@@ -273,7 +271,7 @@ if(empty($firstname));
 
                             <div class="umbraco-forms-navigation row form-row">
 
-                              <div class="col-sm-12 bg-warning rounded-pill">
+                              <div class="col-sm-12 bg-warning rounded-pill w-50" style="margin-left: 215px;">
                                 <input type="submit" name="UserAdd" class="btn btn-third btn-submit" value="<?php echo $addME ?>">
                               </div>
 
