@@ -79,7 +79,7 @@ if (isset($_POST['but_upload'])) {
 
                 <form style=" max-height: 150px" class="d-flex flex-wrap">
                     <label for="video-desc">Description:</label>
-                    <input type="text" name="video-desc" id="video-desc" class="container-fluid" style="max-height: 60px ;" />
+                    <input type="text" name="video-desc" id="video-desc" class="container-fluid" style="height: 100px;"/>
                 </form>
 
                 <form style=" max-height: 60px" class="d-flex flex-wrap">
@@ -94,7 +94,7 @@ if (isset($_POST['but_upload'])) {
             </div>
         </div>
         <form method="post" action="" enctype='multipart/form-data' style="max-width: 565px">
-            <label for="-file-">Upload movie file (.mkv, .mp4, .webm, etc)</label>
+            <label for="-file-">Upload movie file (.mp4, .avi, .3gp, .mov, .mpeg)</label>
             <input type='file' name='file' id="-file-" />
             <input type='submit' value='Upload' name='but_upload' class="px-5 bg-dark-subtle border-dotted rounded-pill">
         </form>
