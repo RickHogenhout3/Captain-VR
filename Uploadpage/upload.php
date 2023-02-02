@@ -57,6 +57,19 @@ if (isset($_POST['but_upload'])) {
 </head>
 
 <body>
+    <style>
+        input::file-selector-button {
+            border-radius: var(--bs-border-radius-pill) !important;
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+            padding: 2px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: black;
+            border-image: initial;
+            width: 145px;
+        }
+    </style>
     <!-- insert navbar -->
     <?php
     include("../navbar.html")
@@ -78,7 +91,7 @@ if (isset($_POST['but_upload'])) {
 
                 <form style=" max-height: 150px" class="d-flex flex-wrap">
                     <label for="video-desc">Description:</label>
-                    <input type="text" name="video-desc" id="video-desc" class="container-fluid" style="height: 100px;"/>
+                    <input type="text" name="video-desc" id="video-desc" class="container-fluid" style="height: 100px;" />
                 </form>
 
                 <form style=" max-height: 60px" class="d-flex flex-wrap">
@@ -95,7 +108,15 @@ if (isset($_POST['but_upload'])) {
         <form method="post" action="" enctype='multipart/form-data' style="max-width: 565px">
             <label for="-file-">Upload movie file (.mp4, .avi, .3gp, .mov, .mpeg)</label>
             <input type='file' name='file' id="-file-" />
-            <input type='submit' value='Upload' name='but_upload' class="px-5 bg-dark-subtle border-dotted rounded-pill">
+            <input type='submit' value='Upload' name='but_upload' class="px-5 bg-dark-subtle border-dotted rounded-pill" style="border-radius: var(--bs-border-radius-pill)!important;
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-warning-rgb),var(--bs-bg-opacity))!important;
+            padding: 2px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: black;
+            border-image: initial;
+            width: 145px;">
         </form>
 
     </div>
