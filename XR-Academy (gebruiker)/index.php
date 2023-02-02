@@ -77,23 +77,89 @@
       </div>
     </div>
     <!-- added video example; this is mostly to show-off the style of when an actual video is added -->
-    <div class="card mt-2">
-      <div class="card-header">
-        <h5 class="card-title text-center">Notice:</h5>
-      </div>
-      <div class="card-body">
-        <h7 class="card-subtitle"
-          >You have restricted access to this content. Subscribe to us
-          <a href="../index.html">here</a>.</h7
-        >
-        <!-- ^ ^ ^ this brings you to the sign-up page -->
+    <div class="container d-grid mt-1">
+      <div class="row g-1">
+        <div class="card text-center" style="max-width: 50%">
+          <div class="card-header bg-info-subtle">Video title</div>
+          <div class="card-img">
+            <img
+              src="loading_video.gif"
+              height="150px"
+              width="150px"
+              alt="loading_video"
+            />
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">- description of the video.</p>
+          </div>
+          <div class="card-footer text-muted">
+            a short summary (a tl;dr) of the video.
+          </div>
+        </div>
+        <div class="card text-center" style="max-width: 50%">
+          <div class="card-header bg-info-subtle">Video title</div>
+          <div class="card-img">
+            <img
+              src="loading_video.gif"
+              height="150px"
+              width="150px"
+              alt="loading_video"
+            />
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">- description of the video.</p>
+          </div>
+          <div class="card-footer text-muted">
+            a short summary (a tl;dr) of the video.
+          </div>
+        </div>
+        <div class="card text-center" style="max-width: 50%">
+          <div class="card-header bg-info-subtle">Video title</div>
+          <div class="card-img">
+            <img
+              src="loading_video.gif"
+              height="150px"
+              width="150px"
+              alt="loading_video"
+            />
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">- description of the video.</p>
+          </div>
+          <div class="card-footer text-muted">
+            a short summary (a tl;dr) of the video.
+          </div>
+        </div>
+        <div class="card text-center" style="max-width: 50%">
+          <div class="card-header bg-info-subtle">Video title</div>
+          <div class="card-img">
+            <img
+              src="loading_video.gif"
+              height="150px"
+              width="150px"
+              alt="loading_video"
+            />
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">- description of the video.</p>
+          </div>
+          <div class="card-footer text-muted">
+            a short summary (a tl;dr) of the video.
+          </div>
+        </div>
       </div>
     </div>
+    <!-- end of added video example -->
     <!-- insert footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <?php include_once('footer.html'); ?>
   </body>
 </html>
