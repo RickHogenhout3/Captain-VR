@@ -41,28 +41,90 @@ if (isset($_POST['but_upload'])) {
     } else {
         $_SESSION['message'] = "Please select a file.";
     }
-    header('location: readfile.php');
+    header('location: admin.php');
     exit;
 } 
 ?>
-<!doctype html> 
-<html> 
-  <head>
-     <title>Upload and Store video to MySQL Database with PHP</title>
-  </head>
-  <body>
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+</head>
+
+<body>
+    <style>
+        input::file-selector-button {
+            border-radius: var(--bs-border-radius-pill) !important;
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
+            padding: 2px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: black;
+            border-image: initial;
+            width: 145px;
+        }
+    </style>
+    <!-- insert navbar -->
+    <?php
+    include("../navbar.html")
+    ?>
     <!-- Upload response -->
-    <?php 
+    <?php
     if (isset($_SESSION['message'])) {
         echo $_SESSION['message'];
         unset($_SESSION['message']);
     }
     ?>
-    <form method="post" action="" enctype='multipart/form-data'>
-      <input type='file' name='file' />
-      <input type='submit' value='Upload' name='but_upload'>
-    </form>
+    <div class="container mt-5">
+        <div class="container d-grid">
+            <div class="row g-3">
+                <form style="max-height: 60px" class="d-flex flex-wrap">
+                    <label for="video-title">Title:</label>
+                    <input type="text" name="title" id="title" class="container-fluid" />
+                </form>
 
-  </body>
+                <form style=" max-height: 150px" class="d-flex flex-wrap">
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" rd="desctiption" class="container-fluid" style="height: 100px;" />
+                </form>
+
+                <form style=" max-height: 60px" class="d-flex flex-wrap">
+                    <label for="summary">Summary:</label>
+                    <input type="text" name="summary" id="summary" class="container-fluid" />
+                </form>
+
+                <form method="post" action="" enctype='multipart/form-data' style="max-height: 60px" class="d-flex flex-wrap">
+                    <label for="video-thumb">Thumbnail:</label>
+                    <input type="file" name="video-thumb" id="video-thumb" />
+                </form>
+            </div>
+        </div>
+        <form method="post" action="" enctype='multipart/form-data' style="max-width: 565px">
+            <label for="-file-">Upload movie file (.mp4, .avi, .3gp, .mov, .mpeg)</label>
+            <input type='file' name='file' id="-file-" />
+            <input type='submit' value='Upload' name='but_upload' class="px-5 bg-dark-subtle border-dotted rounded-pill" style="border-radius: var(--bs-border-radius-pill)!important;
+            --bs-bg-opacity: 1;
+            background-color: rgba(var(--bs-warning-rgb),var(--bs-bg-opacity))!important;
+            padding: 2px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: black;
+            border-image: initial;
+            width: 145px;">
+        </form>
+
+    </div>
+    <!-- insert footer -->
+    <?php
+    include("../footer.html")
+    ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
 </html>

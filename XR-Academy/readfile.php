@@ -19,7 +19,7 @@ try {
  
      <?php
      while($row = $fetchVideos->fetch(PDO::FETCH_ASSOC)){
-       $location = $row['location'];
+       $location = explode('bit-academy', $row['location'])[1];
        $name = $row['name'];
        echo "<div style='float: left; margin-right: 5px;'>
           <video src='".$location."' controls width='320px' height='320px' ></video>

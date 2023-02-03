@@ -60,11 +60,16 @@ $query = $connect->query("SELECT * FROM coaches")
               <a class="nav-link" href="#"
                 ><button class="bg-warning border rounded">
                   Sail along
-                </button></a
-              >
+                </button></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php"
+                ><button class="bg-danger border rounded">
+                  Logout
+                </button></a>
             </li>
           </ul>
         </div>
@@ -274,7 +279,7 @@ $query = $connect->query("SELECT * FROM coaches")
       <div class="row text-dark d-flex justify-center">
         <div class="col border bg-primary-subtle p-5">
           <button class="border bg-primary-subtle" type="submit">
-            <svg
+          <a href="upload.php"><svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -287,9 +292,9 @@ $query = $connect->query("SELECT * FROM coaches")
               />
             </svg>
             <h3>
-              Add video file; <br />
+              Add video file;<br/>
               (.mp4, .webm, .mkv, etc)
-            </h3>
+            </h3> </a>
           </button>
         </div>
       </div>

@@ -207,7 +207,7 @@ if(empty($firstname));
 
                                     <label for="email"
                                       class="umbraco-forms-label form-label mb-0">
-                                      E-mail
+                                      E-mail (for coaches)*
                                     </label>
 
                                     <div class="umbraco-forms-field-wrapper">

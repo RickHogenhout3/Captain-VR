@@ -115,7 +115,7 @@ include_once "config.php";
                                                                     <div class=" umbraco-forms-field name shortanswer mandatory mb-2">
 
                                                                         <label for="firstname" class="umbraco-forms-label form-label mb-0">
-                                                                            Firstname
+                                                                            Coach-Firstname
                                                                         </label>
 
                                                                         <div class="umbraco-forms-field-wrapper">
@@ -185,10 +185,8 @@ include_once "config.php";
                                                             <div class="col-sm-12 bg-warning rounded-pill w-50" style="margin-left: 215px;">
                                                                 <input type="submit" class="btn btn-third btn-submit" value="Sign" name="login">
                                                             </div>
-
-
                                                         </div>
-
+                                                        If you don't have an account, please sign-up <a href="sign-up.php">here</a>.
                                                     </div>
                                                     <!-- ending bootstrap 5 forms theme --><input name="ufprt" type="hidden" value="18F94509CB0C5D21CCFFBB9AA7D27B4FA2382AD64882C4E8FC5B009EE8CA89E5F8FF50F51BD69688487ACA49BBA1AA9AEA4F578F221A49074AE16F383602518916F7E0666513E57521054F10EE45DA0F6B715D424B93F54BED709F02A8D1A0A1912A53A7959AD531220C22FE89997039F4B8D1C875191D97EDB9891E65E0125E8DAEDF98C52B409467C97B9703CCF35C">
                                                 </form>

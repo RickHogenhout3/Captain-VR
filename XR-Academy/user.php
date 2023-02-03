@@ -66,6 +66,12 @@ $query = $connect->query("SELECT * FROM users")
             <li class="nav-item">
               <a class="nav-link" href="readfile.php">Contact </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php"
+                ><button class="bg-danger border rounded">
+                  Logout
+                </button></a>
+            </li>
           </ul>
         </div>
       </div>

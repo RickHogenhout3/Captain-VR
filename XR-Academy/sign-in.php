@@ -26,7 +26,7 @@ include_once "config.php";
                 if($count > 0)  
                 {  
                     $_SESSION["firstname"] = $_POST["firstname"];  
-                    header("location:admin.php");  
+                    header("location:user.php");  
                 } else {  
                 $message = '<label>Wrong Data</label>'; 
             }  
@@ -188,6 +188,8 @@ include_once "config.php";
 
 
                                                         </div>
+
+                                                        If you don't have an account, please sign-up <a href="sign-up.php">here</a>.
 
                                                     </div>
                                                     <!-- ending bootstrap 5 forms theme --><input name="ufprt" type="hidden" value="18F94509CB0C5D21CCFFBB9AA7D27B4FA2382AD64882C4E8FC5B009EE8CA89E5F8FF50F51BD69688487ACA49BBA1AA9AEA4F578F221A49074AE16F383602518916F7E0666513E57521054F10EE45DA0F6B715D424B93F54BED709F02A8D1A0A1912A53A7959AD531220C22FE89997039F4B8D1C875191D97EDB9891E65E0125E8DAEDF98C52B409467C97B9703CCF35C">
